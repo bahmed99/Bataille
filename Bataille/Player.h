@@ -12,6 +12,8 @@ public :
 	Player(void);
 	void setPrenom(string);
 	string getPrenom(); 
+	Hand& getHand(); 
+	void setHand(Hand& h);
 	~Player(void); 
 };
 

@@ -1,13 +1,15 @@
 #include "Card.h"
 
-Card::Card():valeur(0),symbole("")
+Card::Card()
 {
+	valeur = 0; 
+	symbole = ""; 
 }
 
 Card::Card(const Card& ct)
 {
-	this->valeur = ct.valeur;
-	this->symbole = ct.symbole;
+	valeur = ct.valeur;
+	symbole = ct.symbole;
 }
 
 int Card::getValeur() const
@@ -22,12 +24,12 @@ string Card::getSymbole() const
 
 void Card::setValeur(int a)
 {
-	valeur = a; 
+	this->valeur = a; 
 }
 
 void Card::setSymbole(string c)
 {
-	symbole = c; 
+	this->symbole = c; 
 }
 
 

@@ -9,7 +9,9 @@ class Card
 	int valeur;
 	string symbole; 
 public : 
-	Card(void); 
+
+	Card(void);
+
 	Card(const Card& ct);
 
 	int getValeur()const; 

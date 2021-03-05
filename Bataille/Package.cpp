@@ -17,28 +17,25 @@ Package::Package(void)
 
 void Package::distribuer(Hand &h1, Hand &h2)
 {
-    Card list1[26], list2[26],aux;
+    Card list1[26], list2[26];
 
     int j = 0;
 
     int indice;
     int pos = 52;
-    for (int i = 0; i < 52; i++)
+    for (int k = 0; k < 52; k++)
     {
         indice = rand() % (pos);
         Pack[indice].echange(Pack[pos - 1]);
-       // Pack[indice] = aux; 
-        //Pack[indice] = Pack[pos - 1]; 
-        //Pack[pos - 1] = aux; 
         pos--;
     }
    
 
     for (int i = 0; i < 26; i++)
     {
-        list1[i] = Pack[j];
+        list1[i] = this->Pack[j];
         j++;
-        list2[i] = Pack[j];
+        list2[i] = this->Pack[j];
         j++;
     }
     h1.setHandPlayer(list1);
