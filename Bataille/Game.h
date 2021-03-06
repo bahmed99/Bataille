@@ -11,7 +11,7 @@ class Game
 
 public :
 	Game(void); 
-	Game(Package& pq);
+	Game(const Package& pq);
 	void Jeux(Player &j1, Player &j2);
 	~Game(void); 
 };

@@ -4,23 +4,44 @@
 #include"Game.h"
 #include <ostream>
 
-int main()
-{
+void bataille() {
     Package pq;
-    Game P =pq;
+    Game P(pq);
     Player p1, p2;
     string a, b;
-    cout << "taper nom joueur 1" << endl; 
+    cout << "taper nom joueur 1" << endl;
     cin >> a;
     p1.setPrenom(a);
     cout << "taper nom joueur 2" << endl;
     cin >> b;
     p2.setPrenom(b);
-    Hand hand1, hand2; 
-    pq.distribuer(hand1,hand2); 
-    p1.setHand(hand1); 
+    Hand hand1, hand2;
+    pq.distribuer(hand1, hand2);
+    p1.setHand(hand1);
     p2.setHand(hand2);
+    cout << "***************Bataille****************" << endl;
     P.Jeux(p1, p2);
+}
+void Menu() {
+    cout << "*******************************Bataille*******************************" << endl;
+    cout <<"                                 " <<"MENU" <<"                            "<<endl; 
+    cout << "-1- Jouer" << endl;
+    cout << "-2- Quitter" << endl; 
+}
+
+int main()
+{
+    int choix; 
+    Menu(); 
+    cout <<" taper votre choix "<< endl; 
+    cin >> choix; 
+    switch (choix)
+    {
+    case 1: bataille();
+        break;
+    default:
+        break;
+    }
     return 0;
 }
 
