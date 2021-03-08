@@ -51,6 +51,23 @@ void Game::Jeux(Player &j1, Player& j2)
 			std::cout << "BATTAILE" << endl;
 			do {
 				Card ct3, ct4, ct5, ct6;
+				if (h1.handPlayer.size() == 1 || h2.handPlayer.size() == 1) {
+					if (h1.handPlayer.size() == 1) {
+						ct3 = h1.handPlayer.top();
+						h1.handPlayer.pop();
+						aux.push(ct3);
+						h2.updateHand(aux);
+						test = true; 
+					}
+					else {
+						ct3 = h2.handPlayer.top();
+						h2.handPlayer.pop();
+						aux.push(ct3);
+						h1.updateHand(aux);
+						test = true;
+					}
+				}
+				else {
 				if (iter % 2 != 0) {
 					
 					ct5 = h1.handPlayer.top();
@@ -68,6 +85,7 @@ void Game::Jeux(Player &j1, Player& j2)
 				
 						std::cout << nom1 << " a emporter la manche" << index << endl;
 						index++;
+						
 						test = true;
 					}
 					else if (ct5.comparer(ct6) == 2) {
@@ -92,10 +110,14 @@ void Game::Jeux(Player &j1, Player& j2)
 					aux.push(ct4);
 					iter++; 
 				}
+				}
 
 
 
 			} while (test == false);} 
+
+			cout << "joueur 1: " << h1.handPlayer.size() << endl;
+			cout << "joueur 2: " << h2.handPlayer.size() << endl;
 		
 	}while (h1.handPlayer.empty()==false && h2.handPlayer.empty()==false); 
 	

@@ -6,6 +6,7 @@ using namespace std;
 
 class Player
 {
+
 	string prenom; 
 	Hand hand;
 public :

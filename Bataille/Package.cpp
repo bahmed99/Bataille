@@ -25,7 +25,8 @@ void Package::distribuer(Hand &h1, Hand &h2)
     int pos = 52;
     for (int k = 0; k < 52; k++)
     {
-        indice = rand() % (pos);
+        
+        indice = rand() % pos;
         Pack[indice].echange(Pack[pos - 1]);
         pos--;
     }

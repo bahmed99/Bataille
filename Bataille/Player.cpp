@@ -7,6 +7,8 @@ Player::Player():prenom("")
 	
 }
 
+
+
 void Player::setPrenom(string prenom)
 {
 	this->prenom = prenom; 
