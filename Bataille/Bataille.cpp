@@ -4,9 +4,8 @@
 #include"Game.h"
 #include <ostream>
 
-
 void bataille() {
-    srand((int)time(0));
+    
     Package pq;
     Game P(pq);
     Player p1, p2;
@@ -29,17 +28,23 @@ void Menu() {
     cout <<"                                 " <<"MENU" <<"                            "<<endl; 
     cout << "-1- Jouer" << endl;
     cout << "-2- Quitter" << endl; 
+    cout<< ""<<endl;
+}
+
+
+stack<int> get(stack<int> c) {
+    return c;
 }
 
 int main()
 {
-    int choix; 
-    
+    int choix;
 
-   
-    Menu(); 
-    cout <<" taper votre choix "<< endl; 
-    cin >> choix; 
+    srand((int)time(0));
+
+    Menu();
+    cout << " taper votre choix " << endl;
+    cin >> choix;
     switch (choix)
     {
     case 1: bataille();
@@ -47,6 +52,8 @@ int main()
     default:
         break;
     }
+
+   
     return 0;
 }
 

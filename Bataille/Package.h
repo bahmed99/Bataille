@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 
+
 #include "Hand.h"  
 using namespace std;
 
@@ -11,7 +12,6 @@ public :
 
 	Package(void); 
 	void distribuer(Hand&, Hand&);
-	Card getcarte(int);
 	~Package(void); 
 };
 

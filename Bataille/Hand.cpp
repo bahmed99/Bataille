@@ -25,15 +25,25 @@ void Hand::updateHand(stack<Card> p)
 
 Hand::Hand(const Hand& h)
 {
-	this->handPlayer = h.handPlayer; 
+	handPlayer = h.handPlayer; 
 }
 
 void Hand::setHandPlayer(Card ct[])
 {
 	for (int i = 0; i < 26; i++)
 	{
-		this->handPlayer.push(ct[i]);
+		handPlayer.push(ct[i]);
 	}
+}
+
+stack<Card> Hand::getHandPlayer()
+{
+	return handPlayer;
+}
+
+void Hand::tirerCard()
+{
+	handPlayer.pop();
 }
 
 

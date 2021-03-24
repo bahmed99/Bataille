@@ -21,8 +21,5 @@ public :
 	int comparer(Card&);
 	void echange(Card&); 
 	~Card(void); 
-
-
-
 };
 
