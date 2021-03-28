@@ -26,7 +26,7 @@ Hand& Player::getHand()
 
 void Player::setHand(Hand& h)
 {
-	this->hand = h;
+	hand = h;
 }
 
 Player::~Player(void)

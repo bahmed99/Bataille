@@ -23,6 +23,7 @@ void bataille() {
     cout << "***************Bataille****************" << endl;
     P.Jeux(p1, p2);
 }
+
 void Menu() {
     cout << "*******************************Bataille*******************************" << endl;
     cout <<"                                 " <<"MENU" <<"                            "<<endl; 
@@ -32,26 +33,28 @@ void Menu() {
 }
 
 
-stack<int> get(stack<int> c) {
-    return c;
-}
-
 int main()
 {
     int choix;
+    do {
+       
+        srand((int)time(0));
+        Menu();
+        cout << " taper votre choix " << endl;
+        cin >> choix;
 
-    srand((int)time(0));
+        switch (choix)
+        {
+        case 1: bataille();
+            break;
+        default:
+            break;
+        }
+    
+    
+    } while (choix!=2);
+   
 
-    Menu();
-    cout << " taper votre choix " << endl;
-    cin >> choix;
-    switch (choix)
-    {
-    case 1: bataille();
-        break;
-    default:
-        break;
-    }
 
    
     return 0;

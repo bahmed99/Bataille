@@ -10,7 +10,6 @@ class Game
 	Package P; 
 
 public :
-	Game(void); 
 	Game(const Package& pq);
 	void Jeux(Player &j1, Player &j2);
 	~Game(void); 

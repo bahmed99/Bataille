@@ -1,16 +1,13 @@
 #include "Game.h"
 #include "Hand.h"
-
+#include <windows.h> 
 #include <ostream>
 
-Game::Game(void)
+Game::Game(const Package& pq):P(pq)
 {
 }
 
-Game::Game(const Package& pq)
-{
-	P = pq;
-}
+
 
 void Game::Jeux(Player &j1, Player& j2)
 {
@@ -135,7 +132,7 @@ void Game::Jeux(Player &j1, Player& j2)
 			cout << "joueur 2: " << h2.getHandPlayer().size() << endl;
 		
 	}while (h1.getHandPlayer().empty()==false && h2.getHandPlayer().empty()==false && test1 ==false);
-	
+	Beep(523, 500);
 	
 	j1.setHand(h1); 
 	j2.setHand(h2); 

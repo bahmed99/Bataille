@@ -31,17 +31,17 @@ Package::Package(void)
 
 void Package::distribuer(Hand &h1, Hand &h2)
 {
-    Card list1[26], list2[26];
-    int j = 0;
+    Card hand1[26], hand2[26];
+    int cpt = 0;
     for (int i = 0; i < 26; i++)
     {
-        list1[i] = this->Pack[j];
-        j++;
-        list2[i] = this->Pack[j];
-        j++;
+        hand1[i] = Pack[cpt];
+        cpt++;
+        hand2[i] = Pack[cpt];
+        cpt++;
     }
-    h1.setHandPlayer(list1);
-    h2.setHandPlayer(list2);
+    h1.setHandPlayer(hand1);
+    h2.setHandPlayer(hand2);
 }
 
 

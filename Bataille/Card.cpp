@@ -36,17 +36,17 @@ void Card::setSymbole(string c)
 
 int Card::comparer(Card &c2) {
 	
-	if (this->valeur > c2.valeur) { return 1; }
-	else if (this->valeur < c2.valeur) { return 2; }
+	if (valeur > c2.valeur) { return 1; }
+	else if (valeur < c2.valeur) { return 2; }
 	else { return 0; }
 }
 
 void Card::echange(Card& ct)
 {
-	Card aide = *this;
+	Card aux = *this;
 	valeur = ct.valeur;
 	symbole = ct.symbole;
-	ct = aide;
+	ct = aux;
 }
 
 Card::~Card(void)
