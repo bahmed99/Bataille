@@ -22,9 +22,9 @@ Package::Package(void)
  
     for (int j = 0; j < 52; j++) {
         int random = rand() % 52;
-        aux.echange(Pack[j]); 
-        Pack[j].echange(Pack[random]); 
-        Pack[random].echange(aux); 
+        aux=Pack[j]; 
+        Pack[j]=Pack[random]; 
+        Pack[random]=aux; 
     }
 
 }

@@ -41,12 +41,14 @@ int Card::comparer(Card &c2) {
 	else { return 0; }
 }
 
-void Card::echange(Card& ct)
+void Card::operator=(const Card& ct)
 {
-	Card aux = *this;
+	/*Card aux = *this;
 	valeur = ct.valeur;
 	symbole = ct.symbole;
-	ct = aux;
+	ct = aux;*/
+	valeur = ct.valeur;
+	symbole = ct.symbole;
 }
 
 Card::~Card(void)

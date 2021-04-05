@@ -20,7 +20,7 @@ public :
 	void setSymbole(string); 
 	int comparer(Card&);
 
-	void echange(Card&); 
+	void operator=(const Card&); 
 	~Card(void); 
 };
 
