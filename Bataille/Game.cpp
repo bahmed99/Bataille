@@ -19,8 +19,7 @@ void Game::Jeux(Player &j1, Player& j2)
 	int index = 1; 
 	do {
 		Card ct1, ct2;
-		int iter=0; 
-		bool test = false;
+		bool testBataille = false;
 		stack <Card> aux; //table 
 		cout << "             " << endl;
 		cout << "joueur 1: " << h1.getHandPlayer().size() << endl;
@@ -85,21 +84,29 @@ void Game::Jeux(Player &j1, Player& j2)
 			else {
 			do { // tnajem barcha bataille 
 				Card ct3, ct4, ct5, ct6;
-				if (h1.getHandPlayer().size() == 0 || h2.getHandPlayer().size() == 0) { // joueur fehom dkhal bataille w howa andou carte wahda li hata maklouba donc makadlouch bech ihot carte li bech tetlab aleha loba
-					if (h1.getHandPlayer().size() == 0) {
+				ct3 = h1.getHandPlayer().top();
+				h1.tirerCard();
+				ct4 = h2.getHandPlayer().top();
+				h2.tirerCard();
+				aux.push(ct3);
+				aux.push(ct4);
+				if (h1.getHandPlayer().size() == 0 || h2.getHandPlayer().size() == 0)
+				{ // joueur fehom dkhal bataille w howa andou carte wahda li hata maklouba donc makadlouch bech ihot carte li bech tetlab aleha loba
+					if (h1.getHandPlayer().size() == 0) 
+					{
 						h2.setHandPlayer(aux);
 						cout << nom2 << " a emporté la manche" << "  " << index << endl;
-						test = true; 
+						testBataille = true;
 					}
-					else {
+					else 
+					{
 						h1.setHandPlayer(aux);
 						cout << nom1 << " a emporté la manche" << "  " << index << endl;
-						test = true;
+						testBataille = true;
 					}
 				}
-				else {
-				if (iter % 2 != 0) { // iter paire = yeklbou les cartes :: iter = impaire yicompariw les cartes
-					
+				else 
+				{
 					ct5 = h1.getHandPlayer().top();
 					h1.tirerCard();
 					ct6 = h2.getHandPlayer().top();
@@ -116,37 +123,23 @@ void Game::Jeux(Player &j1, Player& j2)
 						cout << nom1 << " a emporté la manche" << index << endl;
 						index++;
 						
-						test = true;
+						testBataille = true;
 					}
 					else if (ct5.comparer(ct6) == 2) {
 						h2.setHandPlayer(aux);
 						cout << nom2 << " a emporter la manche" << index << endl;
 						index++;
 						
-						test = true;
+						testBataille = true;
 					}
 					else { //bataille fi wist bataille 
 						cout << "BATTAILE" << endl;
-						cout << "             " << endl;
-						
-						iter++;
+						cout << "             "<< endl;
 					}
-				}
-				else {
-					
-					ct3 = h1.getHandPlayer().top();
-					h1.tirerCard();
-					ct4 = h2.getHandPlayer().top();
-					h2.tirerCard();
-					aux.push(ct3);
-					aux.push(ct4);
-					iter++; 
-				}
+				
 				}
 
-
-
-			} while (test == false);}
+			} while (testBataille == false);}
 			}
 
 			
