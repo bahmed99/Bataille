@@ -5,9 +5,16 @@ Hand::Hand(void)
 
 }
 
-void Hand::updateHand(stack<Card> p)
+
+
+Hand::Hand(const Hand& h)
 {
-	stack <Card> aux;
+	handPlayer = h.handPlayer; 
+}
+
+void Hand::setHandPlayer(stack<Card> p)
+{
+	stack <Card> aux; // pile de passage 
 	while (handPlayer.empty() == false) {
 		aux.push(handPlayer.top());
 		handPlayer.pop();
@@ -19,20 +26,6 @@ void Hand::updateHand(stack<Card> p)
 	while (aux.empty() == false) {
 		handPlayer.push(aux.top());
 		aux.pop();
-	}
-}
-
-
-Hand::Hand(const Hand& h)
-{
-	handPlayer = h.handPlayer; 
-}
-
-void Hand::setHandPlayer(Card ct[])
-{
-	for (int i = 0; i < 26; i++)
-	{
-		handPlayer.push(ct[i]);
 	}
 }
 

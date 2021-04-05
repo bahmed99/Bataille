@@ -6,8 +6,8 @@
 
 void bataille() {
     
-    Package pq;
-    Game P(pq);
+    Package pq;// t3aba w tmaskha 
+    Game P(pq); 
     Player p1, p2;
     string a, b;
     cout << "taper nom joueur 1" << endl;

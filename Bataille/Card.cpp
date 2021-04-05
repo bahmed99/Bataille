@@ -24,12 +24,12 @@ string Card::getSymbole() const
 
 void Card::setValeur(int a)
 {
-	this->valeur = a; 
+	valeur = a; 
 }
 
 void Card::setSymbole(string c)
 {
-	this->symbole = c; 
+	symbole = c; 
 }
 
 

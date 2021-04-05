@@ -9,7 +9,7 @@ string const Symboles[4] = {"carreau","trefle","pique","coeur"};
 Package::Package(void)
 {
     int i = 0;
-    Card C; 
+    Card aux; 
     for (int symb = 0; symb < 4; symb++) {
         for (int val = 1; val <= 13; val++)
         {
@@ -22,22 +22,22 @@ Package::Package(void)
  
     for (int j = 0; j < 52; j++) {
         int random = rand() % 52;
-        C.echange(Pack[j]);
+        aux.echange(Pack[j]); 
         Pack[j].echange(Pack[random]); 
-        Pack[random].echange(C); 
+        Pack[random].echange(aux); 
     }
 
 }
 
 void Package::distribuer(Hand &h1, Hand &h2)
 {
-    Card hand1[26], hand2[26];
+    stack <Card> hand1, hand2;
     int cpt = 0;
     for (int i = 0; i < 26; i++)
     {
-        hand1[i] = Pack[cpt];
+        hand1.push(Pack[cpt]);
         cpt++;
-        hand2[i] = Pack[cpt];
+        hand2.push(Pack[cpt]);
         cpt++;
     }
     h1.setHandPlayer(hand1);

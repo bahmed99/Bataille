@@ -19,6 +19,7 @@ public :
 	void setValeur(int); 
 	void setSymbole(string); 
 	int comparer(Card&);
+
 	void echange(Card&); 
 	~Card(void); 
 };
