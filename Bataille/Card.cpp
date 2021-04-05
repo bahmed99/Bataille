@@ -43,10 +43,6 @@ int Card::comparer(Card &c2) {
 
 void Card::operator=(const Card& ct)
 {
-	/*Card aux = *this;
-	valeur = ct.valeur;
-	symbole = ct.symbole;
-	ct = aux;*/
 	valeur = ct.valeur;
 	symbole = ct.symbole;
 }
