@@ -12,7 +12,6 @@ public :
 
 	Card(void);
 
-	Card(const Card& ct);
 
 	int getValeur()const; 
 	string getSymbole()const; 

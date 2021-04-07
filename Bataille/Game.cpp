@@ -25,9 +25,6 @@ void Game::Jeux(Player &j1, Player& j2)
 		cout << "joueur 1: " << h1.getHandPlayer().size() << endl;
 		cout << "joueur 2: " << h2.getHandPlayer().size() << endl;
 
-
-
-		
 		ct1 = h1.getHandPlayer().top(); //sommet 
 		cout <<nom1 <<":"<<"  "<< ct1.getValeur()<<ct1.getSymbole()<< endl;
 		h1.tirerCard();

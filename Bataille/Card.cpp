@@ -6,11 +6,7 @@ Card::Card()
 	symbole = ""; 
 }
 
-Card::Card(const Card& ct)
-{
-	valeur = ct.valeur;
-	symbole = ct.symbole;
-}
+
 
 int Card::getValeur() const
 {

@@ -13,7 +13,7 @@ public :
 
 	
 	Hand(void); 
-	Hand(const Hand& h);
+
 	void setHandPlayer(stack<Card>);
 	stack<Card> getHandPlayer();
 	void tirerCard();

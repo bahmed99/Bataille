@@ -7,10 +7,7 @@ Hand::Hand(void)
 
 
 
-Hand::Hand(const Hand& h)
-{
-	handPlayer = h.handPlayer; 
-}
+
 
 void Hand::setHandPlayer(stack<Card> p)
 {
