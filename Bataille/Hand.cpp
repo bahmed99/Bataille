@@ -11,7 +11,7 @@ Hand::Hand(void)
 
 void Hand::setHandPlayer(stack<Card> p)
 {
-	stack <Card> aux; // pile de passage 
+	stack <Card> aux;
 	while (handPlayer.empty() == false) {
 		aux.push(handPlayer.top());
 		handPlayer.pop();

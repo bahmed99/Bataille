@@ -52,7 +52,7 @@ void Game::Jeux(Player &j1, Player& j2)
 			cout << "BATTAILE" << endl;
 			cout << "             " << endl;
 			
-			if (h1.getHandPlayer().size() == 0 || h2.getHandPlayer().size() == 0) { // joueur fehom ki dkhal bataille mandou hata carte
+			if (h1.getHandPlayer().size() == 0 || h2.getHandPlayer().size() == 0) { 
 
 				if (h1.getHandPlayer().size() == 0) {
 					h2.setHandPlayer(aux);
@@ -63,7 +63,7 @@ void Game::Jeux(Player &j1, Player& j2)
 					test1 = true;
 				}
 			}
-			else if (h1.getHandPlayer().size() == 1 || h2.getHandPlayer().size() == 1) { // joueur fehom ki dkhal bataille mandou hata carte
+			else if (h1.getHandPlayer().size() == 1 || h2.getHandPlayer().size() == 1) { 
 
 					if (h1.getHandPlayer().size() == 1) {
 						aux.push(h1.getHandPlayer().top());
@@ -79,7 +79,7 @@ void Game::Jeux(Player &j1, Player& j2)
 					}
 			}
 			else {
-			do { // tnajem barcha bataille 
+			do { 
 				Card ct3, ct4, ct5, ct6;
 				ct3 = h1.getHandPlayer().top();
 				h1.tirerCard();
@@ -88,17 +88,17 @@ void Game::Jeux(Player &j1, Player& j2)
 				aux.push(ct3);
 				aux.push(ct4);
 				if (h1.getHandPlayer().size() == 0 || h2.getHandPlayer().size() == 0)
-				{ // joueur fehom dkhal bataille w howa andou carte wahda li hata maklouba donc makadlouch bech ihot carte li bech tetlab aleha loba
+				{ 
 					if (h1.getHandPlayer().size() == 0) 
 					{
 						h2.setHandPlayer(aux);
-						cout << nom2 << " a emporté la manche" << "  " << index << endl;
+						cout << nom2 << " a emporte la manche" << "  " << index << endl;
 						testBataille = true;
 					}
 					else 
 					{
 						h1.setHandPlayer(aux);
-						cout << nom1 << " a emporté la manche" << "  " << index << endl;
+						cout << nom1 << " a emporte la manche" << "  " << index << endl;
 						testBataille = true;
 					}
 				}
@@ -117,14 +117,14 @@ void Game::Jeux(Player &j1, Player& j2)
 					{
 						h1.setHandPlayer(aux);
 				
-						cout << nom1 << " a emporté la manche" << index << endl;
+						cout << nom1 << " a emporte la manche" << index << endl;
 						index++;
 						
 						testBataille = true;
 					}
 					else if (ct5.comparer(ct6) == 2) {
 						h2.setHandPlayer(aux);
-						cout << nom2 << " a emporter la manche" << index << endl;
+						cout << nom2 << " a emporte la manche" << index << endl;
 						index++;
 						
 						testBataille = true;
@@ -147,7 +147,7 @@ void Game::Jeux(Player &j1, Player& j2)
 	j2.setHand(h2); 
 	cout << " " << endl;
 	if (h1.getHandPlayer().empty()==true) { cout << nom2 << " a ganger" << endl; }
-	else { cout << nom1 << " a ganger" << endl; }
+	else { cout << nom1 << " a gange" << endl; }
 	
 } 
 

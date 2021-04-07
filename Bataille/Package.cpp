@@ -1,7 +1,7 @@
 #include "Package.h"
 #include"Card.h"
 
-#include<algorithm>
+
 #include<random>
 
 string const Symboles[4] = {"carreau","trefle","pique","coeur"}; 
