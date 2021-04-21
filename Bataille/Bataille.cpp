@@ -38,9 +38,11 @@ void Menu() {
 }
 
 
+
 int main()
 {
     int choix;
+
     do {
        
         srand((int)time(0));

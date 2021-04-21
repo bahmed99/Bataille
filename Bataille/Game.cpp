@@ -14,7 +14,7 @@ Game::Game(const Package& pq):P(pq)
 void Game::Jeux(Player &j1, Player& j2)
 {
 
-	int choix; 
+	
 	Hand h1=j1.getHand(); 
 	Hand h2=j2.getHand(); 
 	string nom1 = j1.getPrenom();
