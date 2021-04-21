@@ -14,9 +14,12 @@ public :
 	
 	Hand(void); 
 
-	void setHandPlayer(stack<Card>);
-	stack<Card> getHandPlayer();
-	void tirerCard();
+	void setHandPlayer(stack<Card>); // Modifier HandPlayer
+
+	stack<Card> getHandPlayer(); // retourner HandPlayer
+
+	void tirerCard(); // depiler << handPlayer >> 
+
 	~Hand(void); 
 
 

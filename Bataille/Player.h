@@ -10,10 +10,20 @@ class Player
 	Hand hand;
 public :
 	Player(void);
-	void setPrenom(string);
-	string getPrenom(); 
-	Hand& getHand(); 
-	void setHand(Hand& h);
+
+
+	void setPrenom(string); // affectuer prénom du joueur
+
+
+	string getPrenom(); // retoruner prénom du joueur
+
+
+	Hand& getHand(); // retourner "hand" du joueur
+
+
+	void setHand(Hand& h); //modifier "hand" 
+
+
 	~Player(void); 
 };
 

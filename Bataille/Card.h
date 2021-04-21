@@ -6,20 +6,25 @@ using namespace std;
 
 class Card
 {
-	int valeur;
+	int valeur; 
 	string symbole; 
 public : 
 
-	Card(void);
+	Card(void); 
 
 
-	int getValeur()const; 
-	string getSymbole()const; 
-	void setValeur(int); 
-	void setSymbole(string); 
-	int comparer(Card&);
+	int getValeur()const;  // retourner la valeur de la carte
+	
+	string getSymbole()const; // retourner la symbole de la carte
+
+	void setValeur(int);  //Affectuer la valeur de la carte
+
+	void setSymbole(string);  // Affectuer le symbole de la carte
+
+	int comparer(Card&); //comparer les valeurs de deux cartes
 
 	void operator=(const Card&); 
+
 	~Card(void); 
 };
 

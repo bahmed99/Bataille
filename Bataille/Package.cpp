@@ -9,7 +9,11 @@ string const Symboles[4] = {"carreau","trefle","pique","coeur"};
 Package::Package(void)
 {
     int i = 0;
-    Card aux; 
+
+    Card aux; // pile pour permutation
+
+    // Donner pour chaque carte du "pack" sa valeur et son symbole
+
     for (int symb = 0; symb < 4; symb++) {
         for (int val = 1; val <= 13; val++)
         {
@@ -19,7 +23,9 @@ Package::Package(void)
             
         }
     }
- 
+
+
+ // Mélanger le "Pack"
     for (int j = 0; j < 52; j++) {
         int random = rand() % 52;
         aux=Pack[j]; 

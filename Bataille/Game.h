@@ -11,7 +11,12 @@ class Game
 
 public :
 	Game(const Package& pq);
-	void Jeux(Player &j1, Player &j2);
+
+
+	void Jeux(Player &j1, Player &j2); // gérer une partie
+
+
 	~Game(void); 
+
 };
 

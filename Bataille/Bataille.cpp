@@ -4,9 +4,12 @@
 #include"Game.h"
 #include <ostream>
 
+
+
+// Une partie du jeu
 void bataille() {
     
-    Package pq;// t3aba w tmaskha 
+    Package pq;
     Game P(pq); 
     Player p1, p2;
     string a, b;
@@ -24,6 +27,8 @@ void bataille() {
     P.Jeux(p1, p2);
 }
 
+
+//menu du jeu
 void Menu() {
     cout << "*******************************Bataille*******************************" << endl;
     cout <<"                                 " <<"MENU" <<"                            "<<endl; 

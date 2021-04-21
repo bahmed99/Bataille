@@ -11,7 +11,15 @@ class Package
 public : 
 
 	Package(void); 
-	void distribuer(Hand&, Hand&);
+
+
+	void distribuer(Hand&, Hand&); // distribuer les cartes entre 2 joueurs
+
+
 	~Package(void); 
+
+
 };
+
+
 
