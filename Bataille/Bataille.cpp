@@ -41,7 +41,7 @@ void Menu() {
 
 int main()
 {
-    int choix;
+    string choix;
 
     do {
        
@@ -50,16 +50,15 @@ int main()
         cout << " taper votre choix " << endl;
         cin >> choix;
 
-        switch (choix)
+        if(choix=="1")
         {
-        case 1: bataille();
-            break;
-        default:
-            break;
+            bataille();
+            
+        
         }
     
     
-    } while (choix!=2);
+    } while (choix!="2");
    
 
 
