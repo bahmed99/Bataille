@@ -5,20 +5,21 @@
 using namespace std;
 
 
-Game::Game(const Package& pq):P(pq)
+Game::Game(const Package& pq, const Player& j1, const Player& j2):P(pq),p1(j1),p2(j2)
 {
 }
 
 
 
-void Game::Jeux(Player &j1, Player& j2)
+void Game::Jeux()
 {
 
 	
-	Hand h1=j1.getHand(); 
-	Hand h2=j2.getHand(); 
-	string nom1 = j1.getPrenom();
-	string nom2 = j2.getPrenom();
+	Hand h1; 
+	Hand h2; 
+	P.distribuer(h1, h2);
+	string nom1 = p1.getPrenom();
+	string nom2 = p2.getPrenom();
 
 	int index = 1; // Nombre de manche
 
@@ -178,8 +179,8 @@ void Game::Jeux(Player &j1, Player& j2)
 	}while (h1.getHandPlayer().empty()==false && h2.getHandPlayer().empty()==false);
 	Beep(523, 500); //sonorie 
 	
-	j1.setHand(h1); 
-	j2.setHand(h2); 
+	p1.setHand(h1); 
+	p2.setHand(h2); 
 
 	cout << "             " << endl;
 

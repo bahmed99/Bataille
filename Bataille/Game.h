@@ -8,12 +8,13 @@ using namespace std;
 class Game
 {
 	Package P; 
+	Player p1, p2; 
 
 public :
-	Game(const Package& pq);
+	Game(const Package& pq,const Player&,const Player&);
 
 
-	void Jeux(Player &j1, Player &j2); // gérer une partie
+	void Jeux(); // gérer une partie
 
 
 	~Game(void); 

@@ -1,4 +1,4 @@
-#include "Package.h"
+﻿#include "Package.h"
 #include"Card.h"
 
 
@@ -25,7 +25,7 @@ Package::Package(void)
     }
 
 
- // M�langer le "Pack"
+ // Mélanger le "Pack"
     for (int j = 0; j < 52; j++) {
         int random = rand() % 52;
         aux=Pack[j]; 
