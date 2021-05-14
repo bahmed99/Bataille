@@ -5,7 +5,7 @@
 using namespace std;
 
 
-Game::Game(const Package& pq, const Player& j1, const Player& j2):P(pq),p1(j1),p2(j2)
+Game::Game(const Package& pq, const Player& j1, const Player& j2):P(pq),p1(j1),p2(j2),round(1)
 {
 }
 
@@ -21,7 +21,7 @@ void Game::Jeux()
 	string nom1 = p1.getPrenom();
 	string nom2 = p2.getPrenom();
 
-	int index = 1; // Nombre de manche
+	
 
 	
 
@@ -53,15 +53,15 @@ void Game::Jeux()
 			if (ct1.comparer(ct2) == 1) // premier joueur remporte la manche
 			{
 				h1.setHandPlayer(aux);
-				cout << nom1 << " a emporte la manche" << "  " << index<< endl;
-				index++;
+				cout << nom1 << " a emporte la manche" << "  " << round<< endl;
+				round++;
 			}
 
 			else if (ct1.comparer(ct2) ==2) // 2éme joueur remporte la manche
 			{
 				h2.setHandPlayer(aux);
-				cout << nom2 << " a emporte la manche" << "  " << index <<endl;
-				index++;
+				cout << nom2 << " a emporte la manche" << "  " << round <<endl;
+				round++;
 			}
 
 		//Egalite
@@ -118,13 +118,13 @@ void Game::Jeux()
 					if (h1.getHandPlayer().size() == 0) 
 					{
 						h2.setHandPlayer(aux);
-						cout << nom2 << " a emporte la manche" << "  " << index << endl;
+						cout << nom2 << " a emporte la manche" << "  " << round << endl;
 						testBataille = true;
 					}
 					else 
 					{
 						h1.setHandPlayer(aux);
-						cout << nom1 << " a emporte la manche" << "  " << index << endl;
+						cout << nom1 << " a emporte la manche" << "  " << round << endl;
 						testBataille = true;
 					}
 				}
@@ -147,8 +147,8 @@ void Game::Jeux()
 					{
 						h1.setHandPlayer(aux);
 				
-						cout << nom1 << " a emporte la manche" << index << endl;
-						index++;
+						cout << nom1 << " a emporte la manche" << round << endl;
+						round++;
 						
 						testBataille = true;
 					}
@@ -156,8 +156,8 @@ void Game::Jeux()
 					// 2éme joueur remporte la manche
 					else if (ct5.comparer(ct6) == 2) {
 						h2.setHandPlayer(aux);
-						cout << nom2 << " a emporte la manche" << index << endl;
-						index++;
+						cout << nom2 << " a emporte la manche" << round << endl;
+						round++;
 						
 						testBataille = true;
 					}

@@ -9,6 +9,7 @@ class Game
 {
 	Package P; 
 	Player p1, p2; 
+	int round; 
 
 public :
 	Game(const Package& pq,const Player&,const Player&);
